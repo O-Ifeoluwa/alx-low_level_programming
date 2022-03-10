@@ -1,9 +1,16 @@
 #include <stdio.h>
 
-/* programs are executed in main and returns an integer on success or failure*/
+
+/**
+ * main - programs are executed here
+ *
+ * Return: 0
+ */
 
 int main(void)
+
 {
-	puts("\"Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a mulitilingual puzzle");
 	return (0);
+
 }
