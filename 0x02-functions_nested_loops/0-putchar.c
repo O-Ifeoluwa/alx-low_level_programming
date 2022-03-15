@@ -2,13 +2,15 @@
 
 int main(void)
 {
-	char grotto[9] = "_putchar";
-	int i = 0;
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
-	for (1 = 0; i < 8; i++)
-	{
-		_putchar(grotto[i]);
-	}
-	_putchar('\n')
 	return (0);
 }
