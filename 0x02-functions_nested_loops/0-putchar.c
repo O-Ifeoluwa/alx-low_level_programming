@@ -7,7 +7,7 @@ int main(void)
 
 	for (1 = 0; i < 8; i++)
 	{
-		_putchar(text[i]);
+		_putchar(grotto[i]);
 	}
 	_putchar('\n')
 	return (0);
