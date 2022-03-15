@@ -2,10 +2,9 @@
 
 /**
  *add - adds two integers
+ *@n1: integer 1
+ *@n2: integer 2
  *
- * n1: interger 1
- * n2: integer 2
- * 
  *Description: give two integers, returns sum
  *
  *Return: sum
