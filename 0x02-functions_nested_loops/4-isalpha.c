@@ -3,7 +3,9 @@
 /**
  * _isalpha - checks for uppercase
  *
- * Return: 1 (if letter)
+ * @c: is an ascii character
+ *
+ * Return: 1 (if lowercase)
  */
 
 int _isalpha(int c)
