@@ -1,5 +1,13 @@
 #include "main.h"
 
+/*
+ * main - Entry point
+ *
+ * Description - program prints _putchar followed by a new line
+ *
+ * Return - 0 on success
+ */
+
 int main(void)
 {
 	_putchar('_');
