@@ -15,7 +15,7 @@ int main(void)
 	{
 		if (n % fp == 0)
 		{
-			n/= fp;
+			n /= fp;
 			fp--;
 		}
 	}
