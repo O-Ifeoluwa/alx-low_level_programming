@@ -1,6 +1,6 @@
 #include "main.h"
 
-/* 
+/*
  * main - check the code
  *
  * @c: checks for uppercase letters
@@ -14,4 +14,4 @@ int _isupper(int c)
 		return (1);
 	else
 		return (0);
-}:wq
+}
