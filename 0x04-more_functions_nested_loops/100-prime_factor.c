@@ -15,11 +15,10 @@ int main(void)
 	{
 		if (n % fp == 0)
 		{
-i			n /= fp;
+			n/= fp;
 			fp--;
 		}
 	}
 	printf("%ld\n", fp);
-
 	return (0);
 }
