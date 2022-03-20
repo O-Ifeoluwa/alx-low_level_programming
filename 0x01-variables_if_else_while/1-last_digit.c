@@ -1,23 +1,29 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
  * main - beginning of program
- * Description: checks the last digit stored by n
- * Return: 0 on success
+ * Description: Print statements based on the last digit of the random number.
+ * Return: 0
  */
 
 int main(void)
 {
 	int n;
+	int j;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 5)
-		printf("Last digit of %d is %d and is greater than 5", n);
-	else if (n == 0)
-		printf("Last digit of %d is %d and is zero", n);
-	else (n < 6 && n != 0)
-		printf("Last digit of %d is %d and is less than 6 and not 0", n);
+	j = n % 10;
+
+	if (j > 5)
+		printf("Last digit of %d is %d and is greater than 5\n",
+				       n, j);
+	else if (j == 0)
+		printf("Last digit of %d is %d and is 0\n", n, j);
+	else
+		printf("Last digit of %d is %d and is less than 6 and not 0\n",
+				       n, j);
+
 	return (0);
 }
