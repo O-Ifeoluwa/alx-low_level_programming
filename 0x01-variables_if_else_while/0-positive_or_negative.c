@@ -1,8 +1,13 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
+/**
+ * main - beginning of program
+ * 
+ * Description: checks if n is positive, negative or zero
+ * Return: 0 on success
+ */
 
-/* betty style doc for function main goes there */
 int main(void)
 {
 	int n;
