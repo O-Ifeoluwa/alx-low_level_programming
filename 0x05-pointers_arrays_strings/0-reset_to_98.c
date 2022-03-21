@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - changes the value of n to p
- * Description: function that takes a pointer to an int as parameter and updates the value it points to to 98.
+ * Description: pointer to an int as and updates the value it points to to 98.
  * @n: an integer
  * @*p: a pointer to n
  * Return: 0 on success
