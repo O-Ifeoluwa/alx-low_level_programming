@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * swap_int - a function that swaps the values of two integers.
- * @a: the integer adresse
- * @b: the integer adresse
+ * swap_int - function that swaps the values of two integers.
+ * @a: the integer address
+ * @b: address of the integer
  *
- * Return: 1 or 0
+ * Return: 0
  */
 
 void swap_int(int *a, int *b)
