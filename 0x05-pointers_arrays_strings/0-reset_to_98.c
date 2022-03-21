@@ -10,16 +10,5 @@
 
 void reset_to_98(int *n)
 {
-	int n;
-	int *p;
-
-	n = 56; /*arbitrarily given number*/
-	p = &n;
-
-	printf("value of 'n': %d\n", n);
-
-	*p = 98;
-
-	printf("value of 'n': %d\n", n);
-	return (0);
+	*n = 98;
 }
