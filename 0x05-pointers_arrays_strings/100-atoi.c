@@ -2,10 +2,6 @@
 
 /**
  * _atoi - converts a string to an integer
- * @i: an integer
- * @d: a digit
- * @n: printed variable
- * @len: length
  * @s: a string
  *
  * Return: the int converted from the string
