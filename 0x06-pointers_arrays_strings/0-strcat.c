@@ -2,7 +2,7 @@
 
 /**
  * main - check the code
- * _str: concatenates two strings
+ * _strcat: concatenates two strings
  * @src: source
  * @dest: destination
  *
