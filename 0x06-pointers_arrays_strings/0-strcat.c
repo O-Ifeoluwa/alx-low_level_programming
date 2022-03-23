@@ -9,10 +9,13 @@
  * Return: pointer to dest
  */
 
-char *_str(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
-	int d = 0;
-	int s = 0;
+	int d;
+	int s;
+
+	d = 0;
+	s = 0;
 
 	while (dest[d] && dest[d] != '\0')
 		d++;
