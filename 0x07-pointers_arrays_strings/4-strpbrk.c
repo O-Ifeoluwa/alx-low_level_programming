@@ -4,7 +4,7 @@
 /**
  * _strpbrk - bytes
  * @s: pointer to char
- * @accept: second string
+ * @accept: string
  * Return: NULL
  */
 
