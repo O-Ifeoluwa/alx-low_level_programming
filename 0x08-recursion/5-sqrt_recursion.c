@@ -19,7 +19,7 @@ int _sqrt(int n, int i)
 }
 
 /**
- * _sqrt_recursion(int n) - returns the natural square root of a number
+ * _sqrt_recursion - returns the natural square root of a number
  * @n: an integer
  * Return: the square root
  */
