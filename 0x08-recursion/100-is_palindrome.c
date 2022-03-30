@@ -2,6 +2,7 @@
 
 /**
  * is_palindrome-  Returns if string is a palindrome or not
+ * _strlen_recursion - string length
  * @s: string
  * Return: 0
  */
