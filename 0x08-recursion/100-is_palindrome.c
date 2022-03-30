@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * is_palindrome-  Returns the natural square root of a number.
- * @s: int type
- * Return: char type
+ * is_palindrome-  Returns if string is a palindrome or not
+ * @s: string
+ * Return: 0
  */
 
 int _strlen_recursion(char *s)
@@ -14,6 +14,13 @@ int _strlen_recursion(char *s)
 	}
 	return (1 + _strlen_recursion(++s));
 }
+
+/**
+ * p1 - palindrome
+ * @s: string
+ * @l: location
+ * Return: 0
+ */
 
 int p1(char *s, int l)
 {
@@ -29,6 +36,11 @@ int p1(char *s, int l)
 	return (0);
 }
 
+/**
+ * is_palindrome - a palindrome
+ * @s: string
+ * Return: 0
+ */
 
 int is_palindrome(char *s)
 {
