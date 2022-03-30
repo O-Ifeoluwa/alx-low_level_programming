@@ -6,35 +6,34 @@
  * Return: char type
  */
 
-int is_palindrome(char *s)
+int _strlen_recursion(char *s)
 {
-	int first, last;
-
-	first = 0;
-	last = _strlen_recursion(s) - 1;
-	return (palindrome(s, first, last));
+	if (!*s)
+	{
+		return (0);
+	}
+	return (1 + _strlen_recursion(++s));
 }
 
-int palindrome(char *s, int first, int last)
+int p1(char *s, int l)
 {
-	if (first > last)
+	if (l < 1)
 	{
 		return (1);
 	}
-	else if (s[first] == s[last])
-	{
-		return (palindrome(s, first + 1, last - 1));
-	}
-	else
-		return (0);
-}
 
-
-int _strlen_recursion(char *s)
-{
-	if (*s != '\0')
+	if (*s == *(s + l))
 	{
-		return (1 + _strlen_recursion(s + 1));
+		return (p1(s + 1, l - 2));
 	}
 	return (0);
 }
+
+
+int is_palindrome(char *s)
+{
+	int len = _strlen_recursion(s);
+
+	return (p1(s, len - 1));
+}
+
