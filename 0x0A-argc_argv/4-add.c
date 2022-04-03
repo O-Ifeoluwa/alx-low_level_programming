@@ -11,29 +11,28 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, add = 0;
+	unsigned int i, sum, num;
 
+	sum = 0;
 
-	if (argc > 1)
+	if (argc < 3)
 	{
-		for (i = 1; i < argc; i++)
+		printf("%d\n", 0);
+		return (0);
+	}
+	while (argc-- && argc > 0)
+	{
+		for (i = 0; argv[argc][i] != '\0'; i++)
 		{
-			for (j = 0; argv[i][j] != '\0'; j++)
+			if (!(isdigit(argv[argc][i])))
 			{
-				if (argv[i][j] < 48 || argv[i][j] > 57)
-				{
-					printf("Error\n");
-					return (1);
-				}
+				printf("Error\n");
+				return (1);
 			}
-			add += atoi(argv[i]);
 		}
-
-		printf("%d\n", add);
+		num = atoi(argv[argc]);
+		sum += num;
 	}
-	else if (argc == 1)
-	{
-		printf("0\n");
-	}
-	return (0);
+	printf("%d\n", sum);
+	return (sum);
 }
