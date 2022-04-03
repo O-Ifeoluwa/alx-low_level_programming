@@ -1,12 +1,12 @@
-#include <main.h>
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * main - takes arguments
- * @argc - count
- * @argv - array
- * Return 0 on success, 1 on error
+ * main - multiplies two numbers.
+ * @argc: count
+ * @argv: array
+ * Return: 0 - success.
  */
 
 int main(int argc, char *argv[])
