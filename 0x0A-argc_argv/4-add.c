@@ -1,40 +1,58 @@
-#include <main.h>
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <ctype.h>
 
 /**
- * main - program
- * @argc: count
- * @argv: array
- * Return: 0 on success
+ * _isnumber - checks if string is a number
+ * @s: string
+ * Return: On success 1.
+ * If not a number, 0 is returned.
  */
 
-int main(int argc, char *argv[])
+int _isnumber(char *s)
 {
-	unsigned int i, sum, num;
+	int i, check, d;
 
-	sum = 0;
-
-	if (argc < 3)
+	i = 0, d = 0, check = 1;
+	if (*s == '-')
+		i++;
+	for (; *(s + i) != 0; i++)
 	{
-		printf("%d\n", 0);
-		return (0);
-	}
-	while (argc-- && argc > 0)
-	{
-		for (i = 0; argv[argc][i] != '\0'; i++)
+		d = isdigit(*(s + i));
+		if (d == 0)
 		{
-			if (!(isdigit(argv[argc][i])))
-			{
-				printf("Error\n");
-				return (1);
-			}
+			check = 0;
+			break;
 		}
-		num = atoi(argv[argc]);
-		sum += num;
 	}
-	printf("%d\n", sum);
-	return (sum);
+	return (check);
+}
+
+/**
+ * main - Entry point
+ * @argc: Counts the number of parameters that go into main
+ * @argv: Pointer of array of pointers containing strings entering main
+ * Return: Always 0 (Success)
+ */
+
+int main(int argc, char **argv)
+{
+	int i, n, ex;
+
+	ex = 0, n = 0;
+	if (argc > 1)
+	{
+		for (i = 1; i < argc; i++)
+		{
+			if (_isnumber(argv[i]))
+				n += atoi(argv[i]);
+			else
+				ex = 1;
+		}
+	}
+	if (ex == 0)
+		printf("%i\n", n);
+	else
+		printf("%s\n", "Error");
+	return (ex);
 }
