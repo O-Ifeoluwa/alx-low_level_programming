@@ -1,8 +1,7 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * malloc_checked - function allocates memory and returns a pointer
+ *i malloc_checked - function allocates memory and returns a pointer
  * @b: is an unsigned b
  * Return: 0 on success and 98 on failure
  */
