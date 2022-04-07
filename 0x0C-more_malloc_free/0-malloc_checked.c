@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- *i malloc_checked - function allocates memory and returns a pointer
+ * *malloc_checked - function allocates memory and returns a pointer
  * @b: is an unsigned b
  * Return: 0 on success and 98 on failure
  */
@@ -16,5 +16,5 @@ void *malloc_checked(unsigned int b)
 	if (ptr == NULL)
 		exit(98);
 
-	return(ptr);
+	return (ptr);
 }
