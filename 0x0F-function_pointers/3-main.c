@@ -12,8 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, c;
-	int (*f)(int, int);
+	int (*g)(int a, int b);
+	int resul, a, b;
 
 	if (argc != 4)
 	{
@@ -22,13 +22,16 @@ int main(int argc, char *argv[])
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	f = get_op_func(argv[2]);
-	if (f == NULL)
+	g =  (*get_op_func(argv[2]));
+
+	if (g == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	c = f(a, b);
-	printf("%d\n", c);
+
+	resul = g(a, b);
+
+	printf("%d\n", resul);
 	return (0);
 }
