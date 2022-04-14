@@ -1,5 +1,10 @@
-#ifndef _FUNCTION_POINTERS_H
-#define _FUNCTION_POINTERS_H
+#ifndef CALC_H
+#define CALC_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 
 /**
  * struct op - struct op
