@@ -2,22 +2,19 @@
 #include <stdlib.h>
 
 /**
- * free_listint2 - a function ...
- * @head: the list
+ * free_listint -  frees a listint_t list.
+ * @head: pointer to the beginning of the list
  *
- * Return: 1 or 0
+ * Return: void
  */
-
-void free_listint2(listint_t **head)
+void free_listint(listint_t *head)
 {
-	listint_t *ptr, *tmp;
+	listint_t *next;
 
-	ptr = *head;
-	while (ptr != NULL)
+	while (head != NULL)
 	{
-		tmp =  ptr;
-		ptr = ptr->next;
-		free(tmp);
+		next = head->next;
+		free(head);
+		head = next;
 	}
-	*head = NULL;
 }
