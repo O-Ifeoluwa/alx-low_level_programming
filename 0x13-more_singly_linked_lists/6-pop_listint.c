@@ -3,9 +3,7 @@
 
 /**
  * pop_listint - deletes the head node of a listint_t linked list
- * @head: double pointer to the be	listint_t *first;
-	int n;
-	if (head == NULL || *ginning of the list
+ * @head: double pointer
  *
  * Return: the head node's data (n).
  */
