@@ -1,48 +1,48 @@
+#include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
+
 
 /**
- * insert_nodeint_at_index - inserts a new node at a given position.
- * @head: head of linked list
- * @idx: index to insert the node
- * @n: new node data
- * Return: new node
+ * insert_nodeint_at_index - a function ...
+ * @head: the list
+ * @n: the chaine
+ * @idx: the number
+ *
+ * Return: 1 or 0
  */
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *current;
-	listint_t *new;
+	listint_t *new, *ptr = *head, *save;
+	unsigned int cpt = 0;
 
-	if (head == NULL)
-		return (0);
-	new = malloc(sizeof(listint_t));
-	if (!new)
-		return (0);
+	new =  malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
 
-	new->next = NULL;
 	new->n = n;
+	new->next = NULL;
 
-	if (idx == 0)
+	if (ptr == NULL || idx == 0)
 	{
-		new->next = *head;
-		(*head) = new;
-		return (new);
+		*head = new;
+		return (*head);
 	}
 
-	current = *head;
-
-	while (idx != 1)
+	while (cpt != idx - 1 && ptr->next != NULL)
 	{
-		current = current->next;
-		--idx;
-		if (current == NULL)
-		{
-			free(new);
-			return (NULL);
-		}
+		ptr = ptr->next;
+		cpt++;
 	}
-	new->next = current->next;
-	current->next = new;
 
+	if (ptr->next == NULL)
+		ptr->next = new;
+	else
+	{
+		save = ptr->next;
+		ptr->next = new;
+		new->next = save;
+	}
 	return (new);
 }
